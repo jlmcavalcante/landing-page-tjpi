@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "landing-page-evento-tjpi:build:production"
+              "buildTarget": "landing-page-evento-tjpi:build:production"
             },
             "development": {
-              "browserTarget": "landing-page-evento-tjpi:build:development"
+              "buildTarget": "landing-page-evento-tjpi:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "landing-page-evento-tjpi:build"
+            "buildTarget": "landing-page-evento-tjpi:build"
           }
         },
         "test": {
