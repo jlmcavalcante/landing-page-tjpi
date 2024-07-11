@@ -1,0 +1,74 @@
+<div class="page">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#speakers">Palestrantes</a></li>
+        <li><a href="#schedule">Programação</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>I Fórum de Inovação do Judiciário Piauiense</h1>
+      <a href="#about">Saiba mais</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content">
+      <h2>Sobre</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec pretium orci. Vivamus malesuada mi eget nisl eleifend, sed sodales eros congue. Phasellus tempus lorem quis lorem suscipit, sed accumsan ante eleifend. Praesent faucibus a ligula rutrum molestie. Donec egestas arcu et nulla pellentesque, maximus sodales nunc luctus. Mauris turpis felis, blandit sed placerat sed, dapibus sed odio. Nulla sit amet eleifend tortor. Integer tortor odio, ornare non enim quis, dictum laoreet turpis.</p>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="content">
+      <h2>Palestrantes</h2>
+      <ul>
+        <li>Palestrante 1</li>
+        <li>Palestrante 2</li>
+        <li>Palestrante 3</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="content">
+      <h2>Programação</h2>
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+        <mat-tab *ngFor="let dia of dias" [label]="dia.label">
+          <div class="tab-content">
+            <mat-accordion>
+              <mat-expansion-panel *ngFor="let palestra of dia.palestras" [disabled]="!palestra.participantes.length && !palestra.palestrante">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> {{palestra.horario}} - {{palestra.titulo}} </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div *ngIf="palestra.palestrante">
+                  <p><strong>Palestrante:</strong> {{palestra.palestrante}}</p>
+                </div>
+                <div *ngIf="palestra.participantes.length > 0">
+                  <p><strong>Participantes:</strong></p>
+                  <ul>
+                    <li *ngFor="let participante of palestra.participantes">{{participante}}</li>
+                  </ul>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content">
+      <h2>Contato</h2>
+      <p>Email: opalalab&#64;tjpi.jus.br</p>
+      <p>Telefone: (86) 9999-9999</p>
+    </div>
+  </section>
+</div>
