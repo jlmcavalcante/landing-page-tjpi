@@ -93,7 +93,30 @@ section {
 #speakers {
   background-color: #114867;
   color: white;
-  text-align: center;
+
+  .container-cards {
+    color: #161616;
+    .card {
+      max-width: 15rem;
+
+      .card-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem 0;
+
+        .card-title {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        .card-subtitle {
+          font-size: .8rem;
+          color: #777777;
+        }
+      }
+    }
+  }
 
   ul {
     list-style: none;

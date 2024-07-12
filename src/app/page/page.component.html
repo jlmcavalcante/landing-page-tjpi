@@ -32,11 +32,20 @@
   <section id="speakers">
     <div class="content">
       <h2>Palestrantes</h2>
-      <ul>
-        <li>Palestrante 1</li>
-        <li>Palestrante 2</li>
-        <li>Palestrante 3</li>
-      </ul>
+
+      <div class="container-cards">
+        <mat-card class="card" appearance="outlined">
+          <img mat-card-image src="..\assets\images\generic-person.png" alt="">
+          <div class="card-header">
+            <span class="card-title">
+              Dr. Fulano da Silva
+            </span>
+            <span class="card-subtitle">
+              Juiz Federal
+            </span>
+          </div>
+        </mat-card>
+      </div>
     </div>
   </section>
 
@@ -47,10 +56,8 @@
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
           <div class="tab-content">
             <mat-accordion>
-              <mat-expansion-panel
-                *ngFor="let palestra of dia.palestras"
-                [disabled]="!palestra.participantes.length && !palestra.palestrante"
-              >
+              <mat-expansion-panel *ngFor="let palestra of dia.palestras"
+                [disabled]="!palestra.participantes.length && !palestra.palestrante">
                 <mat-expansion-panel-header class="custom-expansion-panel-header">
                   <mat-panel-title>
                     <span class="schedule-panel-time">
