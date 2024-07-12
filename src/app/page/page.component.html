@@ -21,7 +21,11 @@
   <section id="about">
     <div class="content">
       <h2>Sobre</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec pretium orci. Vivamus malesuada mi eget nisl eleifend, sed sodales eros congue. Phasellus tempus lorem quis lorem suscipit, sed accumsan ante eleifend. Praesent faucibus a ligula rutrum molestie. Donec egestas arcu et nulla pellentesque, maximus sodales nunc luctus. Mauris turpis felis, blandit sed placerat sed, dapibus sed odio. Nulla sit amet eleifend tortor. Integer tortor odio, ornare non enim quis, dictum laoreet turpis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec pretium orci. Vivamus malesuada mi eget
+        nisl eleifend, sed sodales eros congue. Phasellus tempus lorem quis lorem suscipit, sed accumsan ante eleifend.
+        Praesent faucibus a ligula rutrum molestie. Donec egestas arcu et nulla pellentesque, maximus sodales nunc
+        luctus. Mauris turpis felis, blandit sed placerat sed, dapibus sed odio. Nulla sit amet eleifend tortor. Integer
+        tortor odio, ornare non enim quis, dictum laoreet turpis.</p>
     </div>
   </section>
 
@@ -38,23 +42,44 @@
 
   <section id="schedule">
     <div class="content">
-      <h2>Programação</h2>
+      <h2 class="schedule-title">Programação</h2>
       <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
           <div class="tab-content">
             <mat-accordion>
-              <mat-expansion-panel *ngFor="let palestra of dia.palestras" [disabled]="!palestra.participantes.length && !palestra.palestrante">
-                <mat-expansion-panel-header>
-                  <mat-panel-title> {{palestra.horario}} - {{palestra.titulo}} </mat-panel-title>
+              <mat-expansion-panel
+                *ngFor="let palestra of dia.palestras"
+                [disabled]="!palestra.participantes.length && !palestra.palestrante"
+              >
+                <mat-expansion-panel-header class="custom-expansion-panel-header">
+                  <mat-panel-title>
+                    <span class="schedule-panel-time">
+                      {{palestra.horario}}
+                    </span>
+                    <span class="schedule-panel-title">
+                      {{palestra.titulo}}
+                    </span>
+                  </mat-panel-title>
                 </mat-expansion-panel-header>
-                <div *ngIf="palestra.palestrante">
-                  <p><strong>Palestrante:</strong> {{palestra.palestrante}}</p>
-                </div>
-                <div *ngIf="palestra.participantes.length > 0">
-                  <p><strong>Participantes:</strong></p>
-                  <ul>
-                    <li *ngFor="let participante of palestra.participantes">{{participante}}</li>
-                  </ul>
+                <div class="mat-expansion-panel-content">
+                  <div *ngIf="palestra.palestrante">
+                    <span class="schedule-description-title">
+                      Palestrante:
+                    </span>
+                    <p class="schedule-description-content">
+                      • {{palestra.palestrante}}
+                    </p>
+                  </div>
+                  <div *ngIf="palestra.participantes.length > 0">
+                    <span class="schedule-description-title">
+                      Participantes:
+                    </span>
+                    <ul class="schedule-description-content">
+                      <li *ngFor="let participante of palestra.participantes">
+                        • {{participante}}
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </mat-expansion-panel>
             </mat-accordion>
