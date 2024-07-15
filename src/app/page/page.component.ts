@@ -46,7 +46,7 @@ export class PageComponent {
 
   dias: Dia[] = [
     {
-      label: 'DIA_SEMANA - XX DE NOME_MÊS',
+      label: 'SEGUNDA-FEIRA - 01 DE SETEMBRO',
       palestras: [
         {
           horario: '09:00 - 09:30',
@@ -97,7 +97,7 @@ export class PageComponent {
       ],
     },
     {
-      label: 'DIA_SEMANA - XX DE NOME_MÊS',
+      label: 'TERÇA-FEIRA - 02 DE SETEMBRO',
       palestras: [
         {
           horario: '08:30',

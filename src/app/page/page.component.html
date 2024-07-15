@@ -14,32 +14,62 @@
   <section id="hero">
     <div class="hero-content">
       <h1>I Fórum de Inovação do Judiciário Piauiense</h1>
-      <a href="#about">Saiba mais</a>
+      <a href="#about">Quero meu ingresso <mat-icon>outbound</mat-icon></a>
     </div>
   </section>
 
   <section id="about">
+    <h2>Sobre</h2>
     <div class="content">
-      <h2>Sobre</h2>
-      <div class="about-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec pretium orci. Vivamus malesuada mi eget
-          nisl eleifend, sed sodales eros congue. Phasellus tempus lorem quis lorem suscipit, sed accumsan ante eleifend.
-          Praesent faucibus a ligula rutrum molestie. Donec egestas arcu et nulla pellentesque, maximus sodales nunc
-          luctus. Mauris turpis felis, blandit sed placerat sed, dapibus sed odio. Nulla sit amet eleifend tortor. Integer
-          tortor odio, ornare non enim quis, dictum laoreet turpis.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec pretium orci. Vivamus malesuada mi eget
-          nisl eleifend, sed sodales eros congue. Phasellus tempus lorem quis lorem suscipit, sed accumsan ante eleifend.
-          Praesent faucibus a ligula rutrum molestie. Donec egestas arcu et nulla pellentesque, maximus sodales nunc
-          luctus. Mauris turpis felis, blandit sed placerat sed, dapibus sed odio. Nulla sit amet eleifend tortor. Integer
-          tortor odio, ornare non enim quis, dictum laoreet turpis.
-        </p>
+      <div class="left-container">
+        <div class="about-text">
+          <p>
+            O 1º Fórum de Inovação do Judiciário Piauiense será um evento pioneiro em Teresina, destaca-se como um marco importante
+            na busca por modernização e eficiência nos serviços judiciários do estado. Reunindo magistrados, servidores,
+            advogados e especialistas em tecnologia, o evento teve como objetivo principal promover a troca de
+            experiências e a discussão de estratégias inovadoras que possam ser implementadas no sistema judiciário
+            local.
+          </p>
+          <p>
+            Entre os temas abordados, destacaram-se a inteligência artificial, a automação de processos judiciais
+            e a utilização de novas ferramentas digitais para agilizar o trâmite de ações e reduzir a burocracia.
+            O Fórum também irá proporcionar painéis e workshops ministrados por renomados profissionais da área de tecnologia e direito
+            permitiram aos participantes compreender melhor as possibilidades de integração de inovações no cotidiano do
+            Judiciário. Com iniciativas como esta, o Tribunal de Justiça do Piauí reafirma seu compromisso com a
+            melhoria contínua de seus serviços, buscando maior transparência, celeridade e eficiência para atender
+            melhor a população piauiense.
+          </p>
+        </div>
       </div>
 
-      <div class="about-image">
-        <img src="../../assets/images/tjpi.jpeg" alt="">
+      <div class="right-container">
+        <img src="../../assets/images/local-sesc.jpg" alt="">
+
+        <div class="info-container">
+          <div class="location-container">
+            <span class="material-symbols-outlined">
+              <mat-icon>location_on</mat-icon>
+            </span>
+            <h4>
+              Local do evento:
+            </h4>
+            <a target="_blank"
+              href="https://www.google.com/maps/place/Sesc+Caju%C3%ADna/@-5.0872304,-42.7821533,15z/data=!4m6!3m5!1s0x78e3b15fb7184c3:0x92053ede1a6fc901!8m2!3d-5.0872304!4d-42.7821533!16s%2Fg%2F11hzn4yrmy?entry=ttu">
+              Av. Cajuína, 725 - Noivos, Teresina - PI, 64046-000
+            </a>
+          </div>
+          <div class="date-container">
+            <span class="material-symbols-outlined">
+              <mat-icon>calendar_month</mat-icon>
+            </span>
+            <h4>
+              Data do evento:
+            </h4>
+            <span>
+              01/09/2024 - 02/09/2024
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -47,8 +77,7 @@
   <section id="speakers">
     <div class="content">
       <h2>Palestrantes</h2>
-
-      <mat-grid-list cols="4" rowHeight="1:1" gutterSize="2rem">
+      <mat-grid-list cols="4" rowHeight="1:1" gutterSize="1.2rem">
         <mat-grid-tile *ngFor="let speaker of (showAll ? speakers : speakers.slice(0, 4))">
           <mat-card class="card" appearance="outlined">
             <img mat-card-image [src]="speaker.photo" alt="{{speaker.name}}">
@@ -63,7 +92,6 @@
           </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
-
       <button mat-raised-button color="primary" (click)="toggleShowAll()">
         {{ showAll ? 'Ver menos' : 'Visualizar todos' }}
       </button>
@@ -125,8 +153,8 @@
         <p><mat-icon>phone</mat-icon> (86) 9999-9999</p>
       </div>
       <div class="footer-links">
-        <a href="#">Página inicial</a>
-        <a href="#">Programação</a>
+        <a href="#hero">Página inicial</a>
+        <a href="#schedule">Programação</a>
       </div>
       <div class="copyright">
         <!-- <p>&copy; Todos os Direitos Reservados.</p> -->
