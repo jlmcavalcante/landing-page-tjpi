@@ -90,7 +90,8 @@ section {
 }
 
 #speakers {
-  background-color: #114867;
+  // Lembrar de colocar a mesma cor de degradê do papel...
+  background: linear-gradient(to left, #114867, #4a90e2);
   color: white;
   text-align: center;
 
