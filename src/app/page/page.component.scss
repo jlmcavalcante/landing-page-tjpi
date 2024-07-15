@@ -89,6 +89,29 @@ section {
   }
 }
 
+#about {
+  .content{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    .about-text {
+      width: 50%;
+      text-indent: 2rem;
+    }
+
+    .about-image {
+      width: 50%;
+
+      img {
+        max-height: 70%;
+        object-fit: cover;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
 #speakers {
   // Lembrar de colocar a mesma cor de degradê do papel...
   background: linear-gradient(to left, #114867, #4a90e2);
@@ -230,12 +253,57 @@ section {
   }
 }
 
-// Contact Section
 #contact {
-  text-align: center;
   background: #114867;
   color: #f4f4f4;
-  p {
-    margin-bottom: 10px;
+  padding: 2rem 0;
+  text-align: center;
+
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        mat-icon {
+          margin-right: 0.5rem;
+          color: #f4f4f4;
+        }
+      }
+    }
+
+    .footer-links {
+      margin-bottom: 2rem;
+      a {
+        color: #f4f4f4;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      p {
+        margin: 0.5rem 0;
+      }
+    }
   }
 }

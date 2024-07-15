@@ -6,6 +6,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+
 
 interface Palestra {
   horario: string;
@@ -22,7 +24,7 @@ interface Dia {
 @Component({
   selector: 'app-page',
   standalone: true,
-  imports: [CommonModule, MatGridListModule, MatTabsModule, MatExpansionModule, MatDividerModule, MatCardModule, MatButtonModule],
+  imports: [CommonModule, MatIconModule, MatGridListModule, MatTabsModule, MatExpansionModule, MatDividerModule, MatCardModule, MatButtonModule],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })
