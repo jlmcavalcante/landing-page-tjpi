@@ -5,6 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 interface Palestra {
   horario: string;
@@ -21,11 +22,26 @@ interface Dia {
 @Component({
   selector: 'app-page',
   standalone: true,
-  imports: [CommonModule, MatTabsModule, MatExpansionModule, MatDividerModule, MatCardModule, MatButtonModule],
+  imports: [CommonModule, MatGridListModule, MatTabsModule, MatExpansionModule, MatDividerModule, MatCardModule, MatButtonModule],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })
 export class PageComponent {
+  showAll = false;
+  speakers = [
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+  ];
+
   dias: Dia[] = [
     {
       label: 'DIA_SEMANA - XX DE NOME_MÊS',
@@ -154,4 +170,10 @@ export class PageComponent {
       ],
     },
   ];
+
+  constructor(){}
+
+  toggleShowAll(): void {
+    this.showAll = !this.showAll;
+  }
 }

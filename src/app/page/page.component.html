@@ -33,19 +33,25 @@
     <div class="content">
       <h2>Palestrantes</h2>
 
-      <div class="container-cards">
-        <mat-card class="card" appearance="outlined">
-          <img mat-card-image src="..\assets\images\generic-person.png" alt="">
-          <div class="card-header">
-            <span class="card-title">
-              Dr. Fulano da Silva
-            </span>
-            <span class="card-subtitle">
-              Juiz Federal
-            </span>
-          </div>
-        </mat-card>
-      </div>
+      <mat-grid-list cols="4" rowHeight="1:1" gutterSize="2rem">
+        <mat-grid-tile *ngFor="let speaker of (showAll ? speakers : speakers.slice(0, 4))">
+          <mat-card class="card" appearance="outlined">
+            <img mat-card-image [src]="speaker.photo" alt="{{speaker.name}}">
+            <div class="card-header">
+              <span class="card-name">
+                {{speaker.name}}
+              </span>
+              <span class="card-subtitle">
+                {{speaker.title}}
+              </span>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <button mat-raised-button color="primary" (click)="toggleShowAll()">
+        {{ showAll ? 'Ver menos' : 'Visualizar todos' }}
+      </button>
     </div>
   </section>
 

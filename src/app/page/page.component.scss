@@ -77,7 +77,7 @@ header {
 
 // Sections
 section {
-  padding: 60px 20px;
+  padding: 2.5rem 1rem;
 
   .content {
     max-width: 1200px;
@@ -89,41 +89,67 @@ section {
   }
 }
 
-// Speakers Section
 #speakers {
   background-color: #114867;
   color: white;
+  text-align: center;
 
-  .container-cards {
-    color: #161616;
+  .content {
+
+    h2 {
+      font-size: 2.5rem;
+      color: #FFFFFF;
+      margin-bottom: 2.5rem;
+    }
+
+    mat-grid-list {
+
+      .mat-grid-tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+
     .card {
-      max-width: 15rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      img {
+        max-height: 75%;
+        object-fit: cover;
+      }
 
       .card-header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: .8rem 0;
+        padding: 1rem;
 
-        .card-title {
-          font-size: 1rem;
-          font-weight: 500;
+        .card-name {
+          color: #01579B;
+          font-size: 1.1rem;
+          font-weight: 700;
         }
+
         .card-subtitle {
-          font-size: .8rem;
+          font-size: 0.8rem;
           color: #777777;
         }
       }
     }
-  }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    button {
+      margin: 4rem 0 1.5rem 0;
+
+      width: 24%;
+      padding: 1.5rem;
+    }
   }
 }
 
