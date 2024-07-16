@@ -36,7 +36,6 @@ header {
 }
 
 #hero {
-  // background: url('/assets/images/background.png');
   background: url('/assets/images/background2.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,7 +56,8 @@ header {
 
     h1 {
       font-size: 3.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
+      font-weight: bolder;
     }
 
     a {
@@ -67,23 +67,25 @@ header {
       justify-content: center;
       gap: 0.5rem;
 
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: .1rem;
       text-decoration: none;
       padding: 15px 30px;
-      border-bottom: .1rem solid #ffffff58;
+      border-bottom: .1rem solid #ffffff34;
       border-radius: 5px;
-      background: linear-gradient(to right, #007BFF, #0056b3); /* Degradê */
-      color: white;
-      width: fit-content; /* Ajusta a largura ao conteúdo */
-      transition: background 0.3s, transform 0.3s; /* Animação suave para background e transform */
+      background: linear-gradient(to right, #007BFF, #0056b3);
+      color: #ffffff;
+      width: fit-content;
+      transition: background 0.3s, transform 0.3s;
 
       mat-icon {
         font-size: 1.5rem;
       }
 
       &:hover {
-        background: linear-gradient(to right, #0056b3, #004080); /* Degradê no hover */
-        transform: scale(1.05); /* Efeito de crescimento suave */
+        background: linear-gradient(to right, #0056b3, #004080);
+        transform: scale(1.05);
       }
     }
   }
@@ -181,9 +183,7 @@ section {
 }
 
 #speakers {
-  // Lembrar de colocar a mesma cor de degradê do papel...
-  background: #114867;
-  // background: linear-gradient(to left, #114867, #4a90e2);
+  background: linear-gradient(45deg, #247C78, #124767 40%);
   color: white;
   text-align: center;
 
@@ -251,16 +251,32 @@ section {
   .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     .schedule-title {
-      font-size: 2.4rem;
+      max-width: 28%;
+      text-align: center;
+      .principal-title {
+        font-size: 2.4rem;
+        color: #01579B;
+        margin-bottom: .5rem;
+      }
+      .rounded-border {
+        border: 1px solid #7878788f;
+        border-radius: .4rem;
+        padding: .4rem;
+        .secondary-title {
+          font-size: .8rem;
+          color: #0000009b;
+        }
+      }
       margin-bottom: 2rem;
-      color: #01579B;
     }
 
     mat-tab-group {
       mat-expansion-panel {
+        border: .1rem solid #e1e1e1;
+        margin-bottom: .5rem;
         mat-expansion-panel-header {
           height: 4rem;
 
@@ -308,7 +324,7 @@ section {
     .custom-expansion-panel-header {
       transition: border-left 0.2s ease;
       &:hover {
-        border-left: .4rem solid #01579B;
+        border-left: .2rem solid #01579B;
       }
     }
   }
@@ -323,55 +339,64 @@ section {
 }
 
 #contact {
-  background: #114867;
+  background: linear-gradient(to top, #247C78, #124767);
   color: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
 
   .content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .logo {
-      max-width: 150px;
-      margin-bottom: 1.5rem;
-    }
+    .content-container-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1rem;
 
-    .contact-info {
-      margin-bottom: 2rem;
-      p {
+      .middle-container-row {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-        mat-icon {
-          margin-right: 0.5rem;
-          color: #f4f4f4;
-        }
-      }
-    }
+        flex-direction: column;
+        gap: .6rem;
+        font-size: .9rem;
+        .contact-info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
 
-    .footer-links {
-      margin-bottom: 2rem;
-      a {
-        color: #f4f4f4;
-        margin: 0 15px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        &:hover {
-          text-decoration: underline;
+            mat-icon {
+              margin-right: 0.4rem;
+              color: #f4f4f4;
+            }
+          }
         }
       }
+
+      .logo {
+        max-width: 100px;
+      }
+
     }
 
     .copyright {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       font-size: 0.9rem;
       p {
-        margin: 0.5rem 0;
+        margin: .2rem 0;
       }
     }
   }

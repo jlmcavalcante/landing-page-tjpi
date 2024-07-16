@@ -14,7 +14,7 @@
   <section id="hero">
     <div class="hero-content">
       <h1>I Fórum de Inovação do Judiciário Piauiense</h1>
-      <a href="#about">Quero meu ingresso <mat-icon>outbound</mat-icon></a>
+      <a color="primary" href="https://www.google.com/" target="_blank">REALIZAR INSCRIÇÃO <mat-icon>outbound</mat-icon></a>
     </div>
   </section>
 
@@ -100,7 +100,14 @@
 
   <section id="schedule">
     <div class="content">
-      <h2 class="schedule-title">Programação</h2>
+      <div class="schedule-title">
+        <h2 class="principal-title">Programação</h2>
+        <div class="rounded-border">
+          <span class="secondary-title">
+            A programação do evento ainda está sendo definida. Fique atento para mais novidades em breve!
+          </span>
+        </div>
+      </div>
       <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
           <div class="tab-content">
@@ -147,17 +154,20 @@
 
   <section id="contact">
     <div class="content">
-      <img src="assets/logo.png" alt="Logo da Instituição" class="logo">
-      <div class="contact-info">
-        <p><mat-icon>email</mat-icon> opalalab&#64;tjpi.jus.br</p>
-        <p><mat-icon>phone</mat-icon> (86) 9999-9999</p>
+      <div class="content-container-row">
+        <img src="../../assets/images/logo-opala-nobg.png" alt="Logo do OPALALAB" class="logo">
+        <div class="middle-container-row">
+          <p>Avenida Padre Humberto Pietrogrande, Nº 3509, São Raimundo, CEP 64.075-065 - Teresina-PI.</p>
+          <div class="contact-info">
+            <p><mat-icon>email</mat-icon> opalalab&#64;tjpi.jus.br</p>
+            <p><mat-icon>phone</mat-icon> (86) 3317-66009</p>
+          </div>
+        </div>
+        <img src="../../assets/images/Logo-TJPI.png" alt="Logo do TJPI" class="logo">
       </div>
-      <div class="footer-links">
-        <a href="#hero">Página inicial</a>
-        <a href="#schedule">Programação</a>
-      </div>
+
       <div class="copyright">
-        <!-- <p>&copy; Todos os Direitos Reservados.</p> -->
+        <p>&copy; 2024, Tribunal de Justiça do Piauí - Todos os direitos reservados.</p>
         <p>Desenvolvido pelo Laboratório de Inovação do TJPI</p>
       </div>
     </div>
