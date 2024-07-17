@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 interface Palestra {
   horario: string;
@@ -24,24 +25,82 @@ interface Dia {
 @Component({
   selector: 'app-page',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatGridListModule, MatTabsModule, MatExpansionModule, MatDividerModule, MatCardModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatTabsModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatCardModule,
+    MatButtonModule,
+    MatTooltipModule,
+  ],
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })
-export class PageComponent {
-  showAll = false;
+export class PageComponent implements OnInit {
+  showAll: boolean = false;
+  warningText: string = '';
+  speakersToShow: number = 4;
+  gridCols: number = 4;
+
   speakers = [
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
-    { name: 'Lorem ipsum', title: 'Lorem ipsum dolor sit amet', photo: '../assets/images/generic-person.png' },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
+    {
+      name: 'Lorem ipsum',
+      title: 'Lorem ipsum dolor sit amet',
+      photo: '../assets/images/generic-person.png',
+    },
   ];
 
   dias: Dia[] = [
@@ -173,7 +232,20 @@ export class PageComponent {
     },
   ];
 
-  constructor(){}
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.warningText = "A programação do evento ainda está sendo definida. Fique atento para mais novidades em breve!";
+  }
+  ngOnInit(): void {
+    this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
+      if (result.matches) {
+        this.speakersToShow = 4;
+        this.gridCols = 2;
+      } else {
+        this.speakersToShow = 4;
+        this.gridCols = 4;
+      }
+    });
+  }
 
   toggleShowAll(): void {
     this.showAll = !this.showAll;

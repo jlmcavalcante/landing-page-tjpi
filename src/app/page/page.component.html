@@ -77,8 +77,8 @@
   <section id="speakers">
     <div class="content">
       <h2>Palestrantes</h2>
-      <mat-grid-list cols="4" rowHeight="1:1" gutterSize="1.2rem">
-        <mat-grid-tile *ngFor="let speaker of (showAll ? speakers : speakers.slice(0, 4))">
+      <mat-grid-list [cols]="gridCols" rowHeight="1:1" gutterSize="1.2rem">
+        <mat-grid-tile *ngFor="let speaker of (showAll ? speakers : speakers.slice(0, speakersToShow))">
           <mat-card class="card" appearance="outlined">
             <img mat-card-image [src]="speaker.photo" alt="{{speaker.name}}">
             <div class="card-header">
@@ -101,12 +101,9 @@
   <section id="schedule">
     <div class="content">
       <div class="schedule-title">
-        <h2 class="principal-title">Programação</h2>
-        <div class="rounded-border">
-          <span class="secondary-title">
-            A programação do evento ainda está sendo definida. Fique atento para mais novidades em breve!
-          </span>
-        </div>
+        <h2 class="principal-title">
+          Programação <mat-icon matTooltip={{warningText}} matTooltipPosition="right">feedback</mat-icon>
+        </h2>
       </div>
       <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
