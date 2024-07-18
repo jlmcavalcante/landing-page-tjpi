@@ -242,10 +242,10 @@ export class PageComponent implements OnInit, AfterViewInit {
         const targetId = (anchor as HTMLAnchorElement).getAttribute('href')!.substring(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          const offset = 70; // Ajustar conforme a altura do seu cabeçalho
+          const offset = 70; // Ajustar conforme a altura do cabeçalho
           const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
           const offsetPosition = elementPosition - offset;
-          this.smoothScrollTo(offsetPosition, 1000); // 1000ms para duração da rolagem
+          this.smoothScrollTo(offsetPosition, 500);
         }
       });
     });
