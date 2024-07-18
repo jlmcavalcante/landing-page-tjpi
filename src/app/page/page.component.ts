@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -39,7 +39,7 @@ interface Dia {
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })
-export class PageComponent implements OnInit {
+export class PageComponent implements OnInit, AfterViewInit {
   showAll: boolean = false;
   warningText: string = '';
   speakersToShow: number = 4;
@@ -235,6 +235,22 @@ export class PageComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {
     this.warningText = "A programação do evento ainda está sendo definida. Fique atento para mais novidades em breve!";
   }
+  ngAfterViewInit(): void {
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', (e: Event) => {
+        e.preventDefault();
+        const targetId = (anchor as HTMLAnchorElement).getAttribute('href')!.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offset = 70; // Ajustar conforme a altura do seu cabeçalho
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - offset;
+          this.smoothScrollTo(offsetPosition, 1000); // 1000ms para duração da rolagem
+        }
+      });
+    });
+  }
+
   ngOnInit(): void {
     this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
       if (result.matches) {
@@ -249,5 +265,28 @@ export class PageComponent implements OnInit {
 
   toggleShowAll(): void {
     this.showAll = !this.showAll;
+  }
+
+  smoothScrollTo(targetY: number, duration: number) {
+    const startY = window.pageYOffset;
+    const difference = targetY - startY;
+    let startTime: number | null = null;
+
+    const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const nextStep = easeInOutQuad(timeElapsed, startY, difference, duration);
+      window.scrollTo(0, nextStep);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    requestAnimationFrame(animation);
   }
 }
