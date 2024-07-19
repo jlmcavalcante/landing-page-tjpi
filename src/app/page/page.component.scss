@@ -531,47 +531,49 @@ section {
       }
 
       mat-tab-group {
-        mat-expansion-panel {
-          border: .1rem solid #e1e1e1;
-          margin-bottom: .5rem;
-          mat-expansion-panel-header {
-            height: 4rem;
+        mat-accordion {
+          mat-expansion-panel {
+            border: .1rem solid #e1e1e1;
+            margin-bottom: .5rem;
+            mat-expansion-panel-header {
+              height: 4rem;
 
-            mat-panel-title {
-              font-weight: 400 !important;
-              gap: 1rem;
+              mat-panel-title {
+                font-weight: 400 !important;
+                gap: 1rem;
 
-              .schedule-panel-time {
-                width: 10%;
-                font-weight: 500;
-                font-size: 0.5rem !important;
-              }
+                .schedule-panel-time {
+                  width: 10%;
+                  font-weight: 500;
+                  font-size: 0.5rem !important;
+                }
 
-              .schedule-panel-title {
-                font-size: 0.6rem !important;
+                .schedule-panel-title {
+                  font-size: 0.6rem !important;
+                }
               }
             }
-          }
 
-          .mat-expansion-panel-content {
-            padding: 1rem .5rem;
-            font-size: .7rem !important;
-
-            .schedule-description-title {
-              font-weight: 500;
+            .mat-expansion-panel-content {
+              padding: 1rem .5rem;
               font-size: .7rem !important;
-            }
 
-            .schedule-description-content {
-              margin-top: .4rem;
-              padding-left: 1rem;
-            }
+              .schedule-description-title {
+                font-weight: 500;
+                font-size: .7rem !important;
+              }
 
-            ul {
-              list-style: none;
-              display: flex;
-              flex-direction: column;
-              gap: .5rem;
+              .schedule-description-content {
+                margin-top: .4rem;
+                padding-left: 1rem;
+              }
+
+              ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+              }
             }
           }
         }

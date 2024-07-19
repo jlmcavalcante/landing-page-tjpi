@@ -2,127 +2,113 @@ import { Dia } from "../models/dia";
 
 export const diasData: Dia[] = [
   {
-    label: 'SEGUNDA-FEIRA - 01 DE SETEMBRO',
+    label: 'PRIMEIRO DIA',
     palestras: [
       {
-        horario: '09:00 - 09:30',
+        horario: '00:00 - 00:00',
         titulo: 'Registro e recepção dos participantes',
         participantes: [],
       },
       {
-        horario: '09:30 - 10:00',
+        horario: '00:00 - 00:00',
         titulo: 'Abertura Oficial do Fórum',
         participantes: [],
       },
       {
-        horario: '10:30 - 11:30',
-        titulo:
-          'Palestra de Abertura: "Inovação: Desafios e Oportunidades para o Judiciário Piauiense"',
-        palestrante: 'Gláucia Guarcello',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
       {
-        horario: '14:00 - 14:50',
-        titulo:
-          'Painel: "Ética e Privacidade no Uso de Tecnologias no Âmbito Jurídico"',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema do painel estará disponível em breve',
         participantes: [
-          'Dr. Nazareno Reis - Juiz Federal',
-          'Advogado indicado pela OAB especializado em Direito Digital',
-          'Raimundo Neto - Gestor de Segurança da ETIPI',
+          'Nome do participante 01',
+          'Nome do participante 02',
+          'Nome do participante 03',
         ],
       },
       {
-        horario: '15:00 - 15:50',
-        titulo:
-          'Palestra: Blockchain e a imutabilidade de dados: Garantindo a autenticidade e a confiabilidade de atos jurídicos',
-        palestrante: 'Dr. Thiago Aleluia',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
       {
-        horario: '16:20 - 17:20',
-        titulo:
-          'Palestra: Como liderar com propósito e Impacto na Era da IA: os desafios e as oportunidades para os líderes do futuro',
-        palestrante: 'Leandro Matos',
-        participantes: [],
-      },
-      {
-        horario: '17:30 - 18:30',
-        titulo: 'Happy Hour (música e coquetel)',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
     ],
   },
   {
-    label: 'TERÇA-FEIRA - 02 DE SETEMBRO',
+    label: 'SEGUNDO DIA',
     palestras: [
       {
-        horario: '08:30',
+        horario: '00:00',
         titulo: 'Abertura',
         participantes: [],
       },
       {
-        horario: '08:50 - 09:30',
-        titulo: 'Painel: Tecnologias Emergentes e Disrupção no Judiciário',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema do painel estará disponível em breve',
         participantes: [
-          'Dr. Clayton Athaide - Secretário da STIC-TJPI',
-          'Dr. Marcelo Mesquita - Juiz do TJ',
-          'Dr. Maurício Machado - Presidente da AMAPI',
+          'Nome do participante 01',
+          'Nome do participante 02',
+          'Nome do participante 03',
         ],
       },
       {
-        horario: '09:30 - 10:00',
-        titulo:
-          'Palestra: "Humanizando a Justiça: Aplicando Design Thinking para Melhorar a Experiência do Usuário no Sistema Judiciário"',
-        palestrante: 'Alguém TRT',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
       {
-        horario: '10:20 - 11:00',
-        titulo:
-          'Painel: Inovação Aberta e Colaboração: O papel da colaboração entre empresas, startups, universidades e governos no estímulo à inovação',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema do painel estará disponível em breve',
         participantes: [
-          'Washington Bandeira - Secretário de Educação',
-          'Victor Hugo - Invest Piauí',
-          'Ellen Gera - Presidente da ETIPI',
-          'André Macedo - Gestor da Secretaria de Inteligência Artificial',
+          'Nome do participante 01',
+          'Nome do participante 02',
+          'Nome do participante 03',
         ],
       },
       {
-        horario: '11:00 - 12:00',
-        titulo:
-          'Palestra: Impacto da IA nas habilidades humanas e no emprego',
-        palestrante: 'Diogo Cortiz',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
       {
-        horario: '14:30 - 15:00',
-        titulo:
-          'Palestra: A Justiça na Era digital e seus principais desafios',
-        palestrante: 'Ministro Kássio Nunes',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
       {
-        horario: '15:00 - 15:50',
-        titulo: 'Painel: Tecnologias Emergentes e o Futuro da Advocacia',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema do painel estará disponível em breve',
         participantes: [
-          'Dr. Celso Barros - Presidente da OAB',
-          'Representante de Empresa de software',
-          'Dra. Isabela Paranaguá',
+          'Nome do participante 01',
+          'Nome do participante 02',
+          'Nome do participante 03',
         ],
       },
       {
-        horario: '16:10 - 17:00',
-        titulo: 'Painel: Inovação e Educação Jurídica',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema do painel estará disponível em breve',
         participantes: [
-          'Horácio Neiva - Professor do ICEV',
-          'Dimmy Magalhães - Doutor em Inteligência Artificial',
-          'Dra. Melissa - Juíza',
+          'Nome do participante 01',
+          'Nome do participante 02',
+          'Nome do participante 03',
         ],
       },
       {
-        horario: '17:00 - 18:00',
-        titulo: 'Tema a Definir',
-        palestrante: 'João Kepler',
+        horario: '00:00 - 00:00',
+        titulo: 'O tema da palestra estará disponível em breve',
+        palestrante: 'Nome do palestrante',
         participantes: [],
       },
     ],

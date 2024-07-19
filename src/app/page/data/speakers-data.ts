@@ -1,59 +1,64 @@
-import { Speakers } from "../models/speakers";
+import { Speakers } from '../models/speakers';
 
 export const speakersData: Speakers[] = [
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
   {
-    name: 'Lorem ipsum',
-    title: 'Lorem ipsum dolor sit amet',
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
+    photo: '../assets/images/generic-person.png',
+  },
+  {
+    name: 'Nome do palestrante',
+    title: 'Título/Formação do palestrante',
     photo: '../assets/images/generic-person.png',
   },
 ];
