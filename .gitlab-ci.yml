@@ -13,9 +13,9 @@ docker_image_fijupi_project:
     - docker:20.10-dind
   script:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$DOCKER_REGISTRY"
-    - docker build -t "$DOCKER_REGISTRY/opala-lab/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA" -t "$DOCKER_REGISTRY/opala-lab/landing-page-evento:$CI_COMMIT_BRANCH-latest" .
-    - docker push "$DOCKER_REGISTRY/opala-lab/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA"
-    - docker push "$DOCKER_REGISTRY/opala-lab/landing-page-evento:$CI_COMMIT_BRANCH-latest"
+    - docker build -t "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA" -t "$DOCKER_REGISTRY/opala-lab/landing-page-evento:$CI_COMMIT_BRANCH-latest" .
+    - docker push "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA"
+    - docker push "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-latest"
   rules:
     - if: '$CI_COMMIT_BRANCH != $CI_BRANCH_PRODUCAO_LANDING_PAGE'
       when: always
