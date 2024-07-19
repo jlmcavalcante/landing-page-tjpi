@@ -10,14 +10,14 @@ docker_image_fijupi_project:
   image: docker:20.10.23
   stage: build
   services:
-    - name: docker:20.10-dind
+    - docker:20.10-dind
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $DOCKER_REGISTRY
-    - docker build -t $DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA -t $DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-latest .
-    - docker push $DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA
-    - docker push $DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-latest
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$DOCKER_REGISTRY"
+    - docker build -t "$DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA" -t "$DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-latest" .
+    - docker push "$DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA"
+    - docker push "$DOCKER_REGISTRY/tjpi/landing-page-evento:$CI_COMMIT_BRANCH-latest"
   rules:
-    - if: $CI_COMMIT_BRANCH != $CI_BRANCH_PRODUCAO_LANDING_PAGE
+    - if: '$CI_COMMIT_BRANCH != $CI_BRANCH_PRODUCAO_LANDING_PAGE'
       when: always
 
 landing_page_producao_deploy:
@@ -25,14 +25,14 @@ landing_page_producao_deploy:
   stage: deploy
   needs:
     - job: docker_image_fijupi_project
-    artifacts: true
+      artifacts: true
   script:
     - apk update
     - apk add --update sshpass openssh
     - pwd
     - ls -lah
-    - sshpass -p $FTP_PASS_PRODUCAO ssh -o StrictHostKeyChecking=no $FTP_USER@$FTP_HOST_PRODUCAO -p $FTP_PORT 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
-    - sshpass -p $FTP_PASS_PRODUCAO ssh -o StrictHostKeyChecking=no $FTP_USER@$FTP_HOST_2_PRODUCAO -p $FTP_PORT 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
+    - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
+    - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_2_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_BRANCH_PRODUCAO_LANDING_PAGE
+    - if: '$CI_COMMIT_BRANCH == $CI_BRANCH_PRODUCAO_LANDING_PAGE'
       when: always
