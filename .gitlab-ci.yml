@@ -16,9 +16,6 @@ docker_image_fijupi_project:
     - docker build -t "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA" -t "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-latest" .
     - docker push "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-$CI_COMMIT_SHORT_SHA"
     - docker push "$DOCKER_REGISTRY/opala-lab/fijupi-landing-page:$CI_COMMIT_BRANCH-latest"
-  rules:
-    - if: '$CI_COMMIT_BRANCH != $CI_BRANCH_PRODUCAO_LANDING_PAGE'
-      when: always
 
 landing_page_producao_deploy:
   image: alpine:3.17.2
@@ -33,6 +30,4 @@ landing_page_producao_deploy:
     - ls -lah
     - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
     - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_2_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
-  rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_BRANCH_PRODUCAO_LANDING_PAGE'
-      when: always
+
