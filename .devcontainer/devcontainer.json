@@ -1,0 +1,29 @@
+{
+  "name": "Fijupi Landing Page Dev Container",
+  "image": "gitlab.tjpi.jus.br:5050/opala-lab/fijupi-landing-page:dev-latest",
+  "features": {},
+  "forwardPorts": [
+      80
+  ],
+  "postCreateCommand": "",
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "vscode-icons-team.vscode-icons",
+              "wayou.vscode-todo-highlight",
+              "timonwong.shellcheck",
+              "ms-azuretools.vscode-docker",
+              "eamodio.gitlens",
+              "vmware.vscode-boot-dev-pack",
+              "humao.rest-client",
+              "Angular.ng-template"
+          ]
+      }
+  },
+  "mounts": [
+      "source=C:/developer/projects/tjpi/landing-page-evento-tjpi,target=/workspace,type=bind,consistency=cached"
+  ],
+  "runArgs": []
+  // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "devcontainer"
+}
