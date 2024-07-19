@@ -11,7 +11,7 @@ services:
     networks:
       - fijupi-network
     volumes:
-      - C:/developer/projects/tjpi/landing-page-evento-tjpi:/usr/share/nginx/html
+      - ./C:/developer/projects/tjpi/landing-page-evento-tjpi:/usr/share/nginx/html
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:80/page"]
       interval: 30s

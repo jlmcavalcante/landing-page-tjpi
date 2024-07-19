@@ -1,33 +1,35 @@
-# Use Node.js v14 as the base image
+# Use Node.js v20.12 como a imagem base
 FROM node:20.12 as build
 
-# Set the working directory to /app
+# Defina o diretório de trabalho para /app
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the container
+# Copie package.json e package-lock.json para o contêiner
 COPY package*.json ./
 
-# Install dependencies
+# Instale as dependências
 RUN npm install
 
-# Copy the rest of the application code to the container
+# Copie o resto do código da aplicação para o contêiner
 COPY . .
 
+# Construa o aplicativo Angular
 RUN npm run build --prod
-#adicionar apenas em prod
 
+# Liste o conteúdo do diretório de build (para fins de depuração)
 RUN ls /app/dist/landing-page-evento-tjpi
 
-# Use a lightweight HTTP server to serve the built Angular app
+# Use um servidor HTTP leve para servir o aplicativo Angular
 FROM nginx:alpine
 
-# Copy the built app from the previous stage
+# Copie o aplicativo construído da etapa anterior
 COPY --from=build /app/dist/landing-page-evento-tjpi /usr/share/nginx/html
 
+# Copie o arquivo de configuração do NGINX da etapa de build
 COPY --from=build /app/nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80 (default for HTTP)
+# Exponha a porta 80 (padrão para HTTP)
 EXPOSE 80
 
-# Start the NGINX web server
+# Inicie o servidor web NGINX
 CMD ["nginx", "-g", "daemon off;"]
