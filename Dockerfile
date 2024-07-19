@@ -16,6 +16,8 @@ COPY . .
 RUN npm run build --prod
 #adicionar apenas em prod
 
+RUN ls /app/dist/landing-page-evento-tjpi
+
 # Use a lightweight HTTP server to serve the built Angular app
 FROM nginx:alpine
 
