@@ -77,19 +77,21 @@
   <section id="speakers">
     <div class="content">
       <h2>Palestrantes</h2>
-      <mat-grid-list [cols]="gridCols" rowHeight="1:1" gutterSize="1.2rem">
+      <mat-grid-list [cols]="gridCols" rowHeight="24rem" gutterSize="1.2rem">
         <mat-grid-tile *ngFor="let speaker of (showAll ? speakers : speakers.slice(0, speakersToShow))">
-          <mat-card class="card" appearance="outlined">
-            <img mat-card-image [src]="speaker.photo" alt="{{speaker.name}}">
-            <div class="card-header">
-              <span class="card-name">
-                {{speaker.name}}
-              </span>
-              <span class="card-subtitle">
-                {{speaker.title}}
-              </span>
+          <a target="_blank" [href]="speaker.link" class="card-link">
+            <div class="card effect2">
+              <img mat-card-image [src]="speaker.photo" alt="{{speaker.name}}">
+              <div class="card-header">
+                <span class="card-name">
+                  {{speaker.name}}
+                </span>
+                <span class="card-subtitle">
+                  {{speaker.title}}
+                </span>
+              </div>
             </div>
-          </mat-card>
+          </a>
         </mat-grid-tile>
       </mat-grid-list>
       <button mat-raised-button color="primary" (click)="toggleShowAll()">

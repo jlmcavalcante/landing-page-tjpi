@@ -1,7 +1,7 @@
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  padding: .6rem;
+  padding: 0.6rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -9,7 +9,7 @@ header {
   nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
 
     ul {
       list-style: none;
@@ -27,7 +27,7 @@ header {
           transition: color 0.3s;
 
           &:hover {
-            color: #007BFF;
+            color: #007bff;
           }
         }
       }
@@ -36,7 +36,7 @@ header {
 }
 
 #hero {
-  background: url('/assets/images/background2.png');
+  background: url("/assets/images/background2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -69,12 +69,12 @@ header {
 
       font-size: 1rem;
       font-weight: 500;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
       text-decoration: none;
       padding: 15px 30px;
-      border-bottom: .1rem solid #ffffff34;
+      border-bottom: 0.1rem solid #ffffff34;
       border-radius: 5px;
-      background: linear-gradient(to right, #007BFF, #0056b3);
+      background: linear-gradient(to right, #007bff, #0056b3);
       color: #ffffff;
       width: fit-content;
       transition: background 0.3s, transform 0.3s;
@@ -91,11 +91,11 @@ header {
   }
 }
 
-
 section {
   padding: 2.5rem 1rem;
 
-  .content, h2 {
+  .content,
+  h2 {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -136,8 +136,8 @@ section {
         max-height: 15rem;
         object-fit: cover;
         object-position: center;
-        border-radius: .625rem;
-        border: .2rem solid #114867;
+        border-radius: 0.625rem;
+        border: 0.2rem solid #114867;
       }
 
       .info-container {
@@ -170,7 +170,8 @@ section {
               color: #114867;
             }
           }
-          a, span {
+          a,
+          span {
             text-decoration: none;
             font-size: 1rem;
             color: #114867;
@@ -183,37 +184,48 @@ section {
 }
 
 #speakers {
-  background: linear-gradient(45deg, #247C78, #124767 40%);
+  background: linear-gradient(45deg, #247c78, #124767 40%);
   color: white;
   text-align: center;
 
   .content {
-
     h2 {
       font-size: 2.5rem;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 2.5rem;
     }
 
     mat-grid-list {
-
+      overflow: visible;
       .mat-grid-tile {
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: visible;
       }
     }
 
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      width: 100%;
+    }
 
     .card {
+      background-color: #fff;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
+      height: fit-content;
+      overflow: visible;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      max-height: 23rem;
 
       img {
-        max-height: 75%;
+        max-height: 100%;
+        object-position: top;
         object-fit: cover;
       }
 
@@ -225,13 +237,13 @@ section {
         padding: 1rem;
 
         .card-name {
-          color: #01579B;
+          color: #01579b;
           font-size: 1.1rem;
           font-weight: 700;
         }
 
         .card-subtitle {
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           color: #777777;
         }
       }
@@ -246,6 +258,26 @@ section {
   }
 }
 
+.effect2 {
+  position: relative;
+  box-shadow: 0 4px 12px rgba(2, 33, 57, 0.4);
+}
+
+.effect2:hover {
+  transform: rotate(3deg) translateY(-20px);
+}
+
+.effect2 {
+  position: relative;
+  box-shadow: 0 4px 12px rgba(2, 33, 57, 0.4);
+  padding: .5rem;
+}
+
+.effect2:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(2, 33, 57, 0.6);
+}
+
 #schedule {
   .content {
     display: flex;
@@ -257,16 +289,16 @@ section {
       text-align: center;
       .principal-title {
         font-size: 2.4rem;
-        color: #01579B;
-        margin-bottom: .5rem;
+        color: #01579b;
+        margin-bottom: 0.5rem;
       }
       margin-bottom: 2rem;
     }
 
     mat-tab-group {
       mat-expansion-panel {
-        border: .1rem solid #e1e1e1;
-        margin-bottom: .5rem;
+        border: 0.1rem solid #e1e1e1;
+        margin-bottom: 0.5rem;
         mat-expansion-panel-header {
           height: 4rem;
 
@@ -276,24 +308,23 @@ section {
 
             .schedule-panel-time {
               font-weight: 500;
-              color: #01579B;
+              color: #01579b;
             }
 
             .schedule-panel-title {
-
             }
           }
         }
 
         .mat-expansion-panel-content {
-          padding: 1rem .5rem;
+          padding: 1rem 0.5rem;
           .schedule-description-title {
             font-weight: 500;
             font-size: 1rem;
           }
 
           .schedule-description-content {
-            margin-top: .4rem;
+            margin-top: 0.4rem;
             padding-left: 1rem;
           }
 
@@ -301,7 +332,7 @@ section {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: .5rem;
+            gap: 0.5rem;
           }
         }
       }
@@ -314,12 +345,11 @@ section {
     .custom-expansion-panel-header {
       transition: border-left 0.2s ease;
       &:hover {
-        border-left: .2rem solid #01579B;
+        border-left: 0.2rem solid #01579b;
       }
     }
   }
 }
-
 
 .mat-expansion-panel-header[aria-disabled="true"] {
   ::ng-deep .mat-expansion-panel-header-title,
@@ -329,7 +359,7 @@ section {
 }
 
 #contact {
-  background: linear-gradient(to top, #247C78, #124767);
+  background: linear-gradient(to top, #247c78, #124767);
   color: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
@@ -351,8 +381,8 @@ section {
       .middle-container-row {
         display: flex;
         flex-direction: column;
-        gap: .6rem;
-        font-size: .9rem;
+        gap: 0.6rem;
+        font-size: 0.9rem;
         .contact-info {
           display: flex;
           flex-direction: row;
@@ -363,7 +393,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: .9rem;
+            font-size: 0.9rem;
 
             mat-icon {
               margin-right: 0.4rem;
@@ -376,7 +406,6 @@ section {
       .logo {
         max-width: 100px;
       }
-
     }
 
     .copyright {
@@ -386,23 +415,21 @@ section {
       justify-content: center;
       font-size: 0.9rem;
       p {
-        margin: .2rem 0;
+        margin: 0.2rem 0;
       }
     }
   }
 }
 
-
-
 @media (max-width: 768px) {
   header {
     nav {
       ul {
-        gap: .6rem;
+        gap: 0.6rem;
 
         li {
           a {
-            font-size: .8rem;
+            font-size: 0.8rem;
             padding: 4px;
             transition: color 0.3s;
           }
@@ -427,7 +454,8 @@ section {
   section {
     padding: 1.5rem 0.5rem;
 
-    .content, h2 {
+    .content,
+    h2 {
       padding: 0 1rem;
     }
   }
@@ -437,7 +465,8 @@ section {
       flex-direction: column;
       gap: 2rem;
 
-      .left-container, .right-container {
+      .left-container,
+      .right-container {
         width: 100%;
       }
 
@@ -491,14 +520,14 @@ section {
       }
 
       .card-name {
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
         font-weight: 700;
-        color: #01579B;
+        color: #01579b;
         text-align: center;
       }
 
       .card-subtitle {
-        font-size: .5rem !important;
+        font-size: 0.5rem !important;
         color: #777777;
         text-align: center;
       }
@@ -507,7 +536,7 @@ section {
     button {
       margin: 2.5rem 0 1.5rem 0 !important;
       width: 100% !important;
-      padding: .8rem !important;
+      padding: 0.8rem !important;
     }
   }
 
@@ -525,7 +554,7 @@ section {
         .principal-title {
           white-space: nowrap;
           font-size: 1.8rem;
-          color: #01579B;
+          color: #01579b;
         }
         margin-bottom: 1rem !important;
       }
@@ -533,8 +562,8 @@ section {
       mat-tab-group {
         mat-accordion {
           mat-expansion-panel {
-            border: .1rem solid #e1e1e1;
-            margin-bottom: .5rem;
+            border: 0.1rem solid #e1e1e1;
+            margin-bottom: 0.5rem;
             mat-expansion-panel-header {
               height: 4rem;
 
@@ -555,16 +584,16 @@ section {
             }
 
             .mat-expansion-panel-content {
-              padding: 1rem .5rem;
-              font-size: .7rem !important;
+              padding: 1rem 0.5rem;
+              font-size: 0.7rem !important;
 
               .schedule-description-title {
                 font-weight: 500;
-                font-size: .7rem !important;
+                font-size: 0.7rem !important;
               }
 
               .schedule-description-content {
-                margin-top: .4rem;
+                margin-top: 0.4rem;
                 padding-left: 1rem;
               }
 
@@ -572,7 +601,7 @@ section {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
-                gap: .5rem;
+                gap: 0.5rem;
               }
             }
           }
@@ -608,8 +637,8 @@ section {
           align-items: center;
           display: flex;
           flex-direction: column;
-          gap: .6rem;
-          font-size: .5rem;
+          gap: 0.6rem;
+          font-size: 0.5rem;
           .contact-info {
             display: flex;
             flex-direction: row;
@@ -621,7 +650,7 @@ section {
               flex-direction: column;
               align-items: center;
               justify-content: center;
-              font-size: .5rem;
+              font-size: 0.5rem;
 
               mat-icon {
                 margin-right: 0 !important;
@@ -636,7 +665,6 @@ section {
           width: 20%;
           max-width: 50px;
         }
-
       }
 
       .copyright {
@@ -644,9 +672,9 @@ section {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: .5rem;
+        font-size: 0.5rem;
         p {
-          margin: .2rem 0;
+          margin: 0.2rem 0;
         }
       }
     }

@@ -2,63 +2,51 @@ import { Speakers } from '../models/speakers';
 
 export const speakersData: Speakers[] = [
   {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    name: 'Glaucia Guarcello, PhD',
+    title: 'COO | Professora | Palestrante',
+    photo: '../assets/palestrantes/glaucia_guarcello.jpeg',
+    link:'https://www.linkedin.com/in/glauciaalves/?originalSubdomain=br',
+  },
+  {
+    name: 'João Kepler',
+    title: 'Escritor | Educador | Investidor | CEO',
+    photo: '../assets/palestrantes/joao_kepler.jpeg',
+    link:'https://www.linkedin.com/in/joaokepler/',
+  },
+  {
+    name: 'Leandro Mattos',
+    title: 'Empreendedor | Professor | Mentor | Neurocientista',
+    photo: '../assets/palestrantes/leandro_mattos.jpeg',
+    link:'https://www.linkedin.com/in/leandromattos-cogni/',
   },
   {
     name: 'Nome do palestrante',
     title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    photo: '../assets/palestrantes/generic-person.png',
+    link:'',
   },
   {
     name: 'Nome do palestrante',
     title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    photo: '../assets/palestrantes/generic-person.png',
+    link:'',
   },
   {
     name: 'Nome do palestrante',
     title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    photo: '../assets/palestrantes/generic-person.png',
+    link:'',
   },
   {
     name: 'Nome do palestrante',
     title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    photo: '../assets/palestrantes/generic-person.png',
+    link:'',
   },
   {
     name: 'Nome do palestrante',
     title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
-  },
-  {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/images/generic-person.png',
+    photo: '../assets/palestrantes/generic-person.png',
+    link:'',
   },
 ];
