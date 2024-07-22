@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   fijupi-landing-page:
     image: 'gitlab.tjpi.jus.br:5050/opala-lab/fijupi-landing-page:dev-latest'
@@ -10,8 +8,6 @@ services:
     restart: always
     networks:
       - fijupi-network
-    volumes:
-      - ./C:/developer/projects/tjpi/landing-page-evento-tjpi:/usr/share/nginx/html
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:80/page"]
       interval: 30s
