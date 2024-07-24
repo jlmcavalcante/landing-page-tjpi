@@ -28,8 +28,7 @@ landing_page_producao_deploy:
     - apk add --update sshpass openssh
     - pwd
     - ls -lah
-    - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
-    - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_2_PRODUCAO" -p "$FTP_PORT" 'cd /opt/tjpi/landing-page; docker compose down; docker compose pull; docker compose build; docker compose up -d'
+    - sshpass -p "$FTP_PASS_PRODUCAO" ssh -o StrictHostKeyChecking=no "$FTP_USER@$FTP_HOST_PRODUCAO" -p "$FTP_PORT" 'cd /opt/opalalab/fijupi/; docker compose down; docker compose pull; docker compose build; docker compose up -d'
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_BRANCH_PRODUCAO
       when: always
