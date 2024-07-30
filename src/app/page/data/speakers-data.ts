@@ -20,10 +20,10 @@ export const speakersData: Speakers[] = [
     link:'https://www.linkedin.com/in/leandromattos-cogni/',
   },
   {
-    name: 'Nome do palestrante',
-    title: 'Título/Formação do palestrante',
-    photo: '../assets/palestrantes/generic-person.png',
-    link:'',
+    name: 'Dr. Guto Niche',
+    title: 'Gestor | Professor | Escritor | Pesquisador',
+    photo: '../assets/palestrantes/guto_niche.jpeg',
+    link:'https://www.linkedin.com/in/dr-guto-niche-717845127/',
   },
   {
     name: 'Nome do palestrante',
