@@ -104,13 +104,13 @@
     <div class="content">
       <div class="schedule-title">
         <h2 class="principal-title">
-          Programação <mat-icon matTooltip={{warningText}} matTooltipPosition="right">feedback</mat-icon>
+          Programação <mat-icon matTooltip={{warningText}} matTooltipPosition="right">info</mat-icon>
         </h2>
       </div>
-      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" style="width: 80%;"> <!-- Forçar largura aqui -->
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
           <div class="tab-content">
-            <mat-accordion>
+            <mat-accordion style="width: 100%;"> <!-- Forçar largura aqui -->
               <mat-expansion-panel *ngFor="let palestra of dia.palestras"
                 [disabled]="!palestra.participantes.length && !palestra.palestrante">
                 <mat-expansion-panel-header class="custom-expansion-panel-header">

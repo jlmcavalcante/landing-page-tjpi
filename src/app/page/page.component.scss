@@ -342,10 +342,10 @@ section {
       padding: 1rem 0 0 0;
     }
 
-    .custom-expansion-panel-header {
+    ::ng-deep .mat-expansion-panel {
       transition: border-left 0.2s ease;
       &:hover {
-        border-left: 0.2rem solid #01579b;
+        border-left: 0.2rem solid #01579b !important;
       }
     }
   }
@@ -560,7 +560,14 @@ section {
       }
 
       mat-tab-group {
+        width: 80% !important;
+        .mat-tab-body-content {
+          display: flex;
+          justify-content: center;
+        }
+
         mat-accordion {
+          width: 100%;
           mat-expansion-panel {
             border: 0.1rem solid #e1e1e1;
             margin-bottom: 0.5rem;

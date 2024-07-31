@@ -43,7 +43,7 @@ export class PageComponent implements OnInit, AfterViewInit {
   dias: Dia[] = diasData;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.warningText = "A programação do evento ainda está sendo definida. Fique atento para mais novidades em breve!";
+    this.warningText = "A programação do evento está sujeita a alterações. Novidades em breve!";
   }
   ngAfterViewInit(): void {
     document.querySelectorAll('nav a').forEach(anchor => {
