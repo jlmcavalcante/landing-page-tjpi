@@ -304,9 +304,11 @@ section {
 
           mat-panel-title {
             font-weight: 400 !important;
-            gap: 2rem;
+            gap: 1.5rem;
 
             .schedule-panel-time {
+              text-align: center;
+              min-width: 6rem;
               font-weight: 500;
               color: #01579b;
             }
