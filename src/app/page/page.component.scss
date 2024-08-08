@@ -229,6 +229,15 @@ section {
         object-fit: cover;
       }
 
+      .touch-icon {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        font-size: 24px;
+        color: #ffffff;
+        padding: 4px;
+      }
+
       .card-header {
         display: flex;
         flex-direction: column;
