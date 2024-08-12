@@ -3,7 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
-  { path: '', component: PageComponent }
+  { path: '', component: PageComponent },
+  /*
+    Qualquer URL que não corresponda a uma rota
+    definida será redirecionada para a rota principal.
+  */
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
