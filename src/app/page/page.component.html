@@ -27,11 +27,11 @@
           </h2>
         </div>
         <div class="sponsors-logos">
-          <img src="../../assets/logos/tre_pi.png" alt="Realizador 1">
-          <img src="../../assets/logos/trf1.png" alt="Realizador 2">
-          <img src="../../assets/logos/trt22.png" alt="Realizador 3">
-          <img src="../../assets/logos/opalalab-logo.png" alt="Realizador 4">
-          <img src="../../assets/logos/tjpi.png" alt="Realizador 5" style="max-height: 3.2rem;">
+          <img src="../../assets/logos/tjpi-novo.png" alt="Realizador">
+          <img src="../../assets/logos/trt22.png" alt="Realizador">
+          <img src="../../assets/logos/tre_pi.png" alt="Realizador">
+          <!-- <img src="../../assets/logos/trf1.png" alt="Realizador"> -->
+          <img src="../../assets/logos/opalalab-logo.png" alt="Realizador">
         </div>
       </div>
     </section>
@@ -131,10 +131,10 @@
           Programação <mat-icon matTooltip={{warningText}} matTooltipPosition="right">info</mat-icon>
         </h2>
       </div>
-      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" style="width: 80%;"> <!-- Forçar largura aqui -->
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" style="width: 80%;">
         <mat-tab *ngFor="let dia of dias" [label]="dia.label">
           <div class="tab-content">
-            <mat-accordion style="width: 100%;"> <!-- Forçar largura aqui -->
+            <mat-accordion style="width: 100%;">
               <mat-expansion-panel *ngFor="let palestra of dia.palestras"
                 [disabled]="!palestra.participantes.length && !palestra.palestrante">
                 <mat-expansion-panel-header class="custom-expansion-panel-header">
