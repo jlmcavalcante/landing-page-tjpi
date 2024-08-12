@@ -40,12 +40,14 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  position: relative;
 
   .hero-content {
     max-width: 800px;
@@ -53,6 +55,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4rem;
 
     h1 {
       font-size: 3.5rem;
@@ -86,6 +89,55 @@ header {
       &:hover {
         background: linear-gradient(to right, #0056b3, #004080);
         transform: scale(1.05);
+      }
+    }
+  }
+
+  #sponsors {
+    max-height: min-content;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .sponsors-container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .sponsors-title {
+        h2 {
+          font-size: 1rem;
+          color: rgba(255, 255, 255, 0.362);
+          margin-bottom: 1rem;
+          font-weight: 400;
+
+          margin-bottom: 1.5rem;
+        }
+      }
+
+
+      .sponsors-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+
+        img {
+          max-height: 2.5rem;
+          max-width: 100%;
+          object-fit: contain;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
       }
     }
   }
@@ -415,7 +467,7 @@ section {
       }
 
       .logo {
-        max-width: 100px;
+        max-width: 70px;
       }
     }
 
