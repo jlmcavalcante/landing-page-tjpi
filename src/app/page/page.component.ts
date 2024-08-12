@@ -1,6 +1,6 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
@@ -62,15 +62,7 @@ export class PageComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet]).subscribe(result => {
-      if (result.matches) {
-        this.speakersToShow = 4;
-        this.gridCols = 2;
-      } else {
-        this.speakersToShow = 4;
-        this.gridCols = 4;
-      }
-    });
+    this.setGridCols(window.innerWidth);
   }
 
   toggleShowAll(): void {
@@ -98,5 +90,18 @@ export class PageComponent implements OnInit, AfterViewInit {
     };
 
     requestAnimationFrame(animation);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.setGridCols(event.target.innerWidth);
+  }
+
+  setGridCols(width: number) {
+    if (width <= 768) {
+      this.gridCols = 1;
+    } else {
+      this.gridCols = 4;
+    }
   }
 }

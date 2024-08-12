@@ -332,11 +332,14 @@ section {
   position: relative;
   box-shadow: 0 4px 12px rgba(2, 33, 57, 0.4);
   padding: .5rem;
+  transition: none; // Remove transições para garantir que não haja problemas com transformações
+  z-index: 1;
 }
 
 .effect2:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px rgba(2, 33, 57, 0.6);
+  transform: none; // Remove qualquer transformação no hover
+  box-shadow: none; // Remove qualquer sombra adicional no hover
+  z-index: 1;
 }
 
 #schedule {
@@ -519,17 +522,16 @@ section {
       .sponsors-container {
         .sponsors-title {
           h2 {
-            font-size: .8rem;
-
+            font-size: .9rem;
             margin-bottom: 1rem;
           }
         }
 
         .sponsors-logos {
-          gap: 1.5rem;
+          gap: 2rem;
 
           img {
-            max-height: 1.5rem;
+            max-height: 2rem;
             max-width: 100%;
             object-fit: contain;
             transition: transform 0.3s;
@@ -551,7 +553,7 @@ section {
 
   #about {
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .content {
@@ -580,56 +582,72 @@ section {
   }
 
   #speakers {
-    .content h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    mat-grid-list {
-      grid-template-columns: repeat(1, 1fr) !important;
-    }
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: space-between;
-
-      img {
-        height: 60%;
-        object-fit: cover;
-        object-position: initial;
+    .content {
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
       }
 
-      .card-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-        height: 40%;
-        box-sizing: border-box;
-        overflow: hidden;
+      mat-grid-list {
+        display: block;
+        margin: 0 auto;
       }
 
-      .card-name {
-        font-size: 0.9rem !important;
-        font-weight: 700;
-        color: #01579b;
-        text-align: center;
+      .mat-grid-tile {
+        width: 100% !important;
+        margin-bottom: 2rem;
+
+        .card {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+          box-shadow: none !important;
+          transform: none !important;
+          z-index: 1 !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: auto;
+          overflow: hidden;
+          border-radius: .625rem;
+
+          img {
+            width: 100%;
+            max-width: 100%; // Garante que a imagem não ultrapasse a largura do cartão
+            height: auto;
+            max-height: 300px; // Limita a altura da imagem para garantir espaço para o cabeçalho
+            object-fit: cover; // Garante que a imagem se ajuste corretamente
+          }
+
+          .card-header {
+            padding: .8rem;
+            background-color: #fff;
+            text-align: center;
+            border-top: 1px solid #ddd; // Adiciona uma linha para separar a imagem do header
+            width: 100%;
+            box-sizing: border-box; // Garante que o padding seja incluído na largura total
+            position: relative;
+            z-index: 2; // Garante que o cabeçalho fique acima da imagem
+            flex-shrink: 0; // Evita que o cabeçalho encolha
+            height: auto; // Permite que o cabeçalho se ajuste conforme necessário
+          }
+
+          .card-name {
+            font-size: 1rem; // Tamanho da fonte ajustado para o título
+            font-weight: bold;
+          }
+
+          .card-subtitle {
+            font-size: 0.7rem; // Tamanho da fonte ajustado para o subtítulo
+            color: #777;
+          }
+        }
       }
 
-      .card-subtitle {
-        font-size: 0.5rem !important;
-        color: #777777;
-        text-align: center;
+      button {
+        width: 100%;
+        padding: 1rem;
       }
-    }
-
-    button {
-      margin: 2.5rem 0 1.5rem 0 !important;
-      width: 100% !important;
-      padding: 0.8rem !important;
     }
   }
 
@@ -674,11 +692,12 @@ section {
                 .schedule-panel-time {
                   width: 10%;
                   font-weight: 500;
+                  min-width: 1.5rem !important;
                   font-size: 0.5rem !important;
                 }
 
                 .schedule-panel-title {
-                  font-size: 0.6rem !important;
+                  font-size: 0.525rem !important;
                 }
               }
             }
@@ -723,6 +742,15 @@ section {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      .schedule-title {
+        max-width: 28%;
+        text-align: center;
+        .principal-title {
+          font-size: 1.8rem !important;
+        }
+        margin-bottom: 2rem;
+      }
 
       .content-container-row {
         width: 100%;
@@ -782,7 +810,5 @@ section {
 }
 
 @media (max-width: 480px) {
-  #speakers mat-grid-list {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
+
 }
