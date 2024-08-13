@@ -8,9 +8,9 @@ export const speakersData: Speakers[] = [
     link:'https://www.linkedin.com/in/joaokepler/',
   },
   {
-    name: 'Alana Medeiros',
+    name: 'MSc. Alana Medeiros',
     title: 'Professora | Pesquisadora | Advogada',
-    photo: '../assets/palestrantes/alana_medeiros.jpeg',
+    photo: '../assets/palestrantes/alana_medeiros.png',
     link:'http://lattes.cnpq.br/6993484248243406',
   },
   {
@@ -26,15 +26,21 @@ export const speakersData: Speakers[] = [
     link:'http://lattes.cnpq.br/6081862787339837',
   },
   {
+    name: 'Des. José Wilson Ferreira',
+    title: 'Desembargador do TJPI',
+    photo: '../assets/palestrantes/jose_wilson.png',
+    link:'https://www.tjpi.jus.br/portaltjpi/team/des-jose-wilson-ferreira-de-araujo-junior/',
+  },
+  {
     name: 'Dr. Horácio Neiva',
     title: 'Pesquisador | Coordenador | Professor',
     photo: '../assets/palestrantes/horacio_neiva.jpeg',
     link:'https://www.linkedin.com/in/horacio-neiva-79a09142',
   },
   {
-    name: 'Leandro Mattos',
+    name: 'Dr. Leandro Mattos',
     title: 'Empreendedor | Professor | Mentor | Neurocientista',
-    photo: '../assets/palestrantes/leandro_mattos.jpeg',
+    photo: '../assets/palestrantes/leandro_mattos.png',
     link:'https://www.linkedin.com/in/leandromattos-cogni/',
   },
   {

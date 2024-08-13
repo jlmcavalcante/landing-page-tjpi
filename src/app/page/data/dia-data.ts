@@ -56,7 +56,7 @@ export const diasData: Dia[] = [
         horario: '16:10 - 17:10',
         titulo:
           'Palestra: Como liderar com propósito e Impacto na Era da IA: os desafios e as oportunidades para os líderes do futuro',
-        palestrante: 'Leandro Matos',
+        palestrante: 'Dr. Leandro Matos',
         participantes: [],
       },
       {
