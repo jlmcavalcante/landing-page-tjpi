@@ -8,6 +8,24 @@ export const speakersData: Speakers[] = [
     link:'https://www.linkedin.com/in/joaokepler/',
   },
   {
+    name: 'Alana Medeiros',
+    title: 'Professora | Pesquisadora | Advogada',
+    photo: '../assets/palestrantes/alana_medeiros.jpeg',
+    link:'http://lattes.cnpq.br/6993484248243406',
+  },
+  {
+    name: 'Des. Olímpio Galvão',
+    title: 'Desembargador do TJPI',
+    photo: '../assets/palestrantes/olimpio_galvao.jpg',
+    link:'https://www.tjpi.jus.br/portaltjpi/team/des-olimpio-jose-passos-galvao/',
+  },
+  {
+    name: 'Dra. Melissa Pessoa',
+    title: 'Juíza do TJPI',
+    photo: '../assets/palestrantes/melissa_pessoa.png',
+    link:'http://lattes.cnpq.br/6081862787339837',
+  },
+  {
     name: 'Dr. Horácio Neiva',
     title: 'Pesquisador | Coordenador | Professor',
     photo: '../assets/palestrantes/horacio_neiva.jpeg',
@@ -18,12 +36,6 @@ export const speakersData: Speakers[] = [
     title: 'Empreendedor | Professor | Mentor | Neurocientista',
     photo: '../assets/palestrantes/leandro_mattos.jpeg',
     link:'https://www.linkedin.com/in/leandromattos-cogni/',
-  },
-  {
-    name: 'Des. Olímpio Galvão',
-    title: 'Desembargador do TJPI',
-    photo: '../assets/palestrantes/olimpio_galvao.jpg',
-    link:'https://www.tjpi.jus.br/portaltjpi/team/des-olimpio-jose-passos-galvao/',
   },
   {
     name: 'Dr. Guto Niche',

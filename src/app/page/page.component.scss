@@ -331,15 +331,15 @@ section {
 .effect2 {
   position: relative;
   box-shadow: 0 4px 12px rgba(2, 33, 57, 0.4);
-  padding: .5rem;
-  transition: none; // Remove transições para garantir que não haja problemas com transformações
+  padding: 0.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
   z-index: 1;
-}
 
-.effect2:hover {
-  transform: none; // Remove qualquer transformação no hover
-  box-shadow: none; // Remove qualquer sombra adicional no hover
-  z-index: 1;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(2, 33, 57, 0.6);
+    background-color: #f5f5f5;
+  }
 }
 
 #schedule {
@@ -609,36 +609,35 @@ section {
           justify-content: flex-start;
           height: auto;
           overflow: hidden;
-          border-radius: .625rem;
 
           img {
             width: 100%;
-            max-width: 100%; // Garante que a imagem não ultrapasse a largura do cartão
+            max-width: 100%;
             height: auto;
-            max-height: 300px; // Limita a altura da imagem para garantir espaço para o cabeçalho
-            object-fit: cover; // Garante que a imagem se ajuste corretamente
+            max-height: 300px;
+            object-fit: cover;
           }
 
           .card-header {
             padding: .8rem;
             background-color: #fff;
             text-align: center;
-            border-top: 1px solid #ddd; // Adiciona uma linha para separar a imagem do header
+            border-top: 1px solid #ddd;
             width: 100%;
-            box-sizing: border-box; // Garante que o padding seja incluído na largura total
+            box-sizing: border-box;
             position: relative;
-            z-index: 2; // Garante que o cabeçalho fique acima da imagem
-            flex-shrink: 0; // Evita que o cabeçalho encolha
-            height: auto; // Permite que o cabeçalho se ajuste conforme necessário
+            z-index: 2;
+            flex-shrink: 0;
+            height: auto;
           }
 
           .card-name {
-            font-size: 1rem; // Tamanho da fonte ajustado para o título
+            font-size: 1rem;
             font-weight: bold;
           }
 
           .card-subtitle {
-            font-size: 0.7rem; // Tamanho da fonte ajustado para o subtítulo
+            font-size: 0.7rem;
             color: #777;
           }
         }

@@ -117,7 +117,7 @@ export const diasData: Dia[] = [
         horario: '14:30 - 15:30',
         titulo: 'Painel - Tecnologias Emergentes e o Futuro da Advocacia',
         participantes: [
-          'Prof. Alana (Mediadora)',
+          'Prof. Alana Medeiros (Mediadora)',
           'Dr. Celso Barros (Presidente da OAB)',
           'Dra. Giovana Nunes',
         ],
