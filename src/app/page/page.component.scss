@@ -452,7 +452,7 @@ section {
 
     img {
       width: 8vw;
-      filter: invert(100%) brightness(100000%);
+      filter: invert(100%) brightness(100000%) grayscale(100%);
     }
   }
 }
