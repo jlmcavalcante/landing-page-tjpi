@@ -7,7 +7,7 @@ header {
   z-index: 999;
 
   nav {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 0.5rem;
 
@@ -17,12 +17,13 @@ header {
       align-items: center;
       justify-content: center;
       gap: 4rem;
+      flex-wrap: wrap;
 
       li {
         a {
           color: #333;
           text-decoration: none;
-          font-size: 1.2rem;
+          font-size: 1rem;
           padding: 10px;
           transition: color 0.3s;
 
@@ -369,6 +370,8 @@ section {
     }
 
     mat-tab-group {
+      width: 100% !important;
+
       mat-expansion-panel {
         border: 0.1rem solid #e1e1e1;
         margin-bottom: 0.5rem;
@@ -457,6 +460,17 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  #sponsors {
+    .sponsors-container {
+
+      img {
+        width: 15vw;
+      }
+    }
+  }
+}
+
 #contact {
   padding: 2rem 0;
   text-align: center;
@@ -527,8 +541,7 @@ section {
   header {
     nav {
       ul {
-        gap: 0.6rem;
-
+        gap: 1rem;
         li {
           a {
             font-size: 0.8rem;
@@ -541,7 +554,7 @@ section {
   }
 
   #hero {
-    height: 50vh;
+    height: 55vh;
 
     .hero-content h1 {
       font-size: 2rem;
@@ -706,7 +719,7 @@ section {
       }
 
       mat-tab-group {
-        width: 80% !important;
+        width: 100% !important;
         .mat-tab-body-content {
           display: flex;
           justify-content: center;
@@ -726,13 +739,14 @@ section {
 
                 .schedule-panel-time {
                   width: 10%;
-                  font-weight: 500;
+                  font-weight: 600;
                   min-width: 1.5rem !important;
                   font-size: 0.5rem !important;
                 }
 
                 .schedule-panel-title {
-                  font-size: 0.525rem !important;
+                  font-size: 0.625rem !important;
+                  font-weight: 500;
                 }
               }
             }
@@ -764,6 +778,10 @@ section {
 
       .tab-content {
         padding: 1rem 0 0 0;
+      }
+
+      ::ng-deep .mdc-tab__text-label {
+        font-size: .6rem !important;
       }
     }
   }
@@ -817,7 +835,6 @@ section {
 
               mat-icon {
                 margin-right: 0 !important;
-                color: #f4f4f4;
                 font-size: small;
               }
             }
