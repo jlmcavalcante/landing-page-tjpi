@@ -39,7 +39,7 @@ export const speakersData: Speakers[] = [
   },
   {
     name: 'Dr. Leandro Mattos',
-    title: 'Empreendedor | Professor | Mentor | Neurocientista',
+    title: 'Empreendedor | Professor | Neurocientista',
     photo: '../assets/palestrantes/leandro_mattos.png',
     link:'https://www.linkedin.com/in/leandromattos-cogni/',
   },
