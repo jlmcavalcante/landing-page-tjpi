@@ -2,10 +2,10 @@ import { Speakers } from '../models/speakers';
 
 export const speakersData: Speakers[] = [
   {
-    name: 'João Kepler',
-    title: 'Escritor | Educador | Investidor | CEO',
-    photo: '../assets/palestrantes/joao_kepler.jpeg',
-    link:'https://www.linkedin.com/in/joaokepler/',
+    name: 'Rafael Fonteles',
+    title: 'Governador | Professor | Consultor',
+    photo: '../assets/palestrantes/rafael_fonteles.png',
+    link:'https://www.pi.gov.br/governador',
   },
   {
     name: 'MSc. Alana Medeiros',
@@ -24,6 +24,12 @@ export const speakersData: Speakers[] = [
     title: 'Juíza do TJPI',
     photo: '../assets/palestrantes/melissa_pessoa.png',
     link:'http://lattes.cnpq.br/6081862787339837',
+  },
+  {
+    name: 'João Kepler',
+    title: 'Escritor | Educador | Investidor | CEO',
+    photo: '../assets/palestrantes/joao_kepler.jpeg',
+    link:'https://www.linkedin.com/in/joaokepler/',
   },
   {
     name: 'Des. José Wilson Ferreira',
