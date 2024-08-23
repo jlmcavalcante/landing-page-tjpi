@@ -3,7 +3,7 @@ import { Speakers } from '../models/speakers';
 export const speakersData: Speakers[] = [
   {
     name: 'Rafael Fonteles',
-    title: 'Governador | Professor | Consultor',
+    title: 'Governador do Estado do Piauí',
     photo: '../assets/palestrantes/rafael_fonteles.png',
     link:'https://www.pi.gov.br/governador',
   },

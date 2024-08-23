@@ -53,8 +53,8 @@ section {
   background-position: center;
 
   display: flex;
-  flex-direction: column;  // Adicionar para que o conteúdo flua verticalmente
-  justify-content: space-between;  // Garantir que a seção supporters fique no final
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 
   height: 90vh;
@@ -79,10 +79,11 @@ section {
       max-width: 800px;
 
       h1 {
+        padding: .5rem;
         font-size: 4rem;
         margin-bottom: 2rem;
         font-weight: 900 !important;
-        line-height: 5.5rem;
+        line-height: 6rem;
 
         @media (max-width: 768px) {
           font-size: 3rem;
@@ -91,7 +92,7 @@ section {
         }
 
         @media (max-width: 576px) {
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 3.5rem;
           text-align: center;
           margin-bottom: 1.5rem;
@@ -212,13 +213,19 @@ section {
   }
 
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 70vh;
     background-size: cover;
     background-position: center center;
   }
 
   @media (max-width: 576px) {
-    height: 60vh;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-height: 800px) {
+    height: 80vh;
     background-size: cover;
     background-position: center;
   }
