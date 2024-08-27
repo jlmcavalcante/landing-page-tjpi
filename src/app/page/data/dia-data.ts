@@ -154,7 +154,7 @@ export const diasData: Dia[] = [
         participantes: [],
       },
       {
-        horario: '17:30 - 18:00',
+        horario: '17:30',
         titulo: 'Palestra - Tema a definir.',
         palestrante: 'João Kepler',
         participantes: [],

@@ -67,4 +67,10 @@ export const speakersData: Speakers[] = [
     photo: '../assets/palestrantes/guga_stocco.png',
     link:'https://www.linkedin.com/in/gstocco',
   },
+  {
+    name: 'Dr. Marcelo Mesquita',
+    title: 'Juiz | Professor | Pesquisador',
+    photo: '../assets/palestrantes/marcelo_mesquita.png',
+    link:'https://www.escavador.com/sobre/2979644/marcelo-mesquita-silva',
+  },
 ];
