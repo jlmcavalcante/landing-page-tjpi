@@ -2,7 +2,7 @@ import { Dia } from '../models/dia';
 
 export const diasData: Dia[] = [
   {
-    label: 'DIA 05 | QUINTA-FEIRA',
+    label: 'DIA 05 | QUINTA',
     palestras: [
       {
         horario: '08:30 - 09:00',
@@ -80,7 +80,7 @@ export const diasData: Dia[] = [
     ],
   },
   {
-    label: 'DIA 06 | SEXTA-FEIRA',
+    label: 'DIA 06 | SEXTA',
     palestras: [
       {
         horario: '08:10',
