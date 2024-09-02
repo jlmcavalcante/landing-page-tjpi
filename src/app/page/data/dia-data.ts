@@ -24,7 +24,7 @@ export const diasData: Dia[] = [
       },
       {
         horario: '10:00 - 10:30',
-        titulo: 'Palestra do Corregedor Geral da Justiça.',
+        titulo: 'Palestra do Corregedor Geral da Justiça - Transformando a Justiça e o Processo de Inovação da Corregedoria Geral da Justiça do Piauí.',
         palestrante: 'Desembargador Olímpio Galvão',
         participantes: [],
       },
@@ -32,6 +32,12 @@ export const diasData: Dia[] = [
         horario: '10:30 - 11:30',
         titulo: 'Palestra de Abertura: Inovação, você está pronto?',
         palestrante: 'Dr. Guto Niche',
+        participantes: [],
+      },
+      {
+        horario: '11:30 - 14:00',
+        titulo: 'Intervalo.',
+        palestrante: '',
         participantes: [],
       },
       {
@@ -92,8 +98,8 @@ export const diasData: Dia[] = [
         titulo: 'Painel - Tecnologias Emergentes e Disrupção no Judiciário.',
         participantes: [
           'Dra. Sâmya Rodrigues – Secretária da Presidência (Mediadora)',
-          'Dr. Marcelo Mesquita (Juiz do TJ)',
-          'Dr. Maurício Machado (Presidente da AMAPI)',
+          'Dr. Marcelo Mesquita - Juiz do TJ',
+          'Dr. Maurício Machado - Presidente da AMAPI',
         ],
       },
       {
@@ -115,8 +121,8 @@ export const diasData: Dia[] = [
         palestrante: '',
         participantes: [
           'Dr. Dimmy Magalhães – Doutor em IA (Mediador)',
-          'Dr. Ellen Gera (Presidente da ETIPI)',
-          'Dr. André Macedo (Gestor da Secretaria de Inteligência Artificial)',
+          'Dr. Ellen Gera - Presidente da ETIPI',
+          'Dr. André Macedo - Gestor da Secretaria de Inteligência Artificial',
         ],
       },
       {
@@ -126,12 +132,17 @@ export const diasData: Dia[] = [
         participantes: [],
       },
       {
+        horario: '12:00 - 14:30',
+        titulo: 'Intervalo.',
+        participantes: [],
+      },
+      {
         horario: '14:30 - 15:30',
         titulo: 'Painel - Tecnologias Emergentes e o Futuro da Advocacia.',
         participantes: [
           'Profª. Alana Gomes de Medeiros (Mediadora)',
-          'Dr. Celso Barros (Presidente da OAB)',
-          'Dra. Giovana Nunes (Advogada)',
+          'Dr. Celso Barros - Presidente da OAB',
+          'Dra. Giovana Nunes - Advogada',
         ],
       },
       {
@@ -155,7 +166,7 @@ export const diasData: Dia[] = [
       },
       {
         horario: '17:30',
-        titulo: 'Palestra - Tema a definir.',
+        titulo: 'Palestra - Inovação e Liderança.',
         palestrante: 'João Kepler',
         participantes: [],
       },
